@@ -29,3 +29,9 @@ which will bring up a Racket REPL. To find out what `<image-id>` is, inspect the
 output of `docker images`.
 
 On Debian, the `docker` executable is called `docker.io`.
+
+---
+
+Copyright © 2014 Asumu Takikawa
+
+This software is distributed under the MIT License. See the LICENSE file.
