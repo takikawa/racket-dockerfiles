@@ -11,7 +11,7 @@ Docker containers with Racket may be useful for deploying Racket-based web appli
 How to use
 ----------
 
-If you already have Docker installed, take the following steps:
+If you already have Docker installed, take the following steps to build an image:
 
   * `git clone https://github.com/takikawa/racket-dockerfiles.git`
   * `cd racket-dockerfiles/<dir>`
@@ -20,5 +20,12 @@ If you already have Docker installed, take the following steps:
 where `<dir>` is one of the Dockerfile directories. For example, the
 `head` directory contains a Dockerfile that builds the latest Racket from
 the git repository.
+
+Once the image is built, you can run it:
+
+  `docker run -i <image-id>`
+
+which will bring up a Racket REPL. To find out what `<image-id>` is, inspect the
+output of `docker images`.
 
 On Debian, the `docker` executable is called `docker.io`.
