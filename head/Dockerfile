@@ -17,6 +17,6 @@ RUN cd racket/racket/src/build && ../configure --prefix=/usr && make && make ins
 
 # Set up the packages in the distribution
 RUN cd racket && make local-source-catalog RACKET=/usr/bin/racket
-RUN cd racket && /usr/bin/raco pkg install --catalog build/local/catalog --auto -i main-distribution
+RUN cd racket && /usr/bin/raco pkg install -j 1 --catalog build/local/catalog --auto -i main-distribution
 
 ENTRYPOINT ["/usr/bin/racket"]
